@@ -9,6 +9,10 @@
         gap: 24px;
         margin-top: 44px;
 
+        @media (max-width: 768px){
+            grid-template-columns: 1fr 1fr;
+        }
+
         &--is-active {
             display: grid;
         }
@@ -25,8 +29,14 @@
         display: flex;
         justify-content: center;
 
+        @media(max-width:768px){
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 20px;
+        }
+
         &__button{
-            color: variaveis.$cosTextoSecundario;
+            color: variaveis.$corTextoSecundario;
             font-size: 20ps;
             border: none;
             padding-bottom: 5px;
@@ -37,7 +47,11 @@
             border-bottom: 5px transparent;
             
             &--is-active{
-                border-bottom: 5px solid variaveis.$cosTextoSecundario;
+                border-bottom: 5px solid variaveis.$corTextoSecundario;
+            }
+
+            @media(max-width:768px){
+                font-size: 16px;
             }
         }
     }
